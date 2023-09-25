@@ -105,14 +105,14 @@ def extractPageContent(id: str):
             
             stepData = {
                 'id': 'Route '+str(index+1),
-                'steppara': [steppara.text for steppara in step.find_all('div', class_='steppara')]
+                'procedures': [steppara.text for steppara in step.find_all('div', class_='steppara')]
             }
 
             procedures.append(stepData)
     elif len(steps) == 1:
         stepData = {
                 'id': 'Route 1',
-                'steppara': [steppara.text for steppara in steps[0].find_all('div', class_='steppara')]
+                'procedures': [steppara.text for steppara in steps[0].find_all('div', class_='steppara')]
             }
 
         procedures.append(stepData)
